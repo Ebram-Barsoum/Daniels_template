@@ -1,0 +1,854 @@
+/*Start Global Variables*/
+:root{
+    --main-transition : .5s;
+    --main-color:#fff;
+    --alt-color: #000;
+}
+/*End Global Variables*/
+
+/*General Styling*/
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-padding-top: 100px;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat', sans-serif;
+}
+/*End General Styling*/
+
+
+/*General Classes*/
+@media(max-width:400px){
+    .container{
+        width: 100%;
+    }
+}
+.header{
+  position: relative;
+  z-index: 0;
+  width: fit-content;
+}
+.header::after{
+  content:'';
+  width: 100%;
+  height:10px;
+
+  position: absolute;
+  left:0;
+  bottom:-5px;
+
+  background-image: url('../images/dots.png');
+
+  z-index: -1;
+
+}
+
+.icon{
+  color:var(--main-color) !important;
+  background-color: var(--alt-color) !important;
+
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+
+  padding:10px;
+}
+.icon:hover{
+  color:var(--alt-color) !important;
+  background-color: var(--main-color) !important;
+}
+
+.row{
+  margin: 0 !important;
+}
+/*End General Classes*/
+
+
+/*********Nav-bar || Section**********/
+.navbar .navbar-nav .nav-link{
+    color:#000 !important;
+    font-size: 15px;
+    position: relative;
+}
+.navbar .navbar-nav .nav-link::after{
+    content:'';
+    width: 0%;
+    height: 2px;
+
+    position: absolute;
+    bottom: 0;
+    left:0%;
+
+    background-color:var(--alt-color);
+
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+
+}
+
+.nav-pills .nav-link.active{
+    background-color: transparent;
+}
+.nav-pills .nav-link.active::after{
+    width: 100%;
+}
+
+/********Home || Section********/
+.home{
+    height:100vh;
+    background-image:linear-gradient( rgba(0,0,0,.6), rgba(0,0,0,.6)),url('../images/bg.jpg') ;
+    background-position: center;
+    background-size: cover;
+}
+.home h1{
+    font-size: 70px;
+}
+.home .typing{
+    height: 50px;
+}
+.home .typing::before{
+    content:'';
+ 
+    translate:-50% 0;
+
+    width:fit-content;
+    height:100%;
+    
+    font-size: 35px;
+    font-weight: bolder;
+    padding-right:5px;
+    border-right: 3px solider var(--main-color);
+
+    animation-name: type;
+    animation-duration: 10s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+
+    color: var(--main-color);
+}
+
+
+@keyframes type{
+      0%{
+        content:'L';
+        border-right: 3px solid #fff;
+      }
+      
+      1%{
+        content:'La';
+        border:none;
+      }
+
+      2%{
+        content:'Lar';
+        border-right: 3px solid #fff;
+      }
+ 
+      3%{
+        content:'Larr';
+        border:none;
+      }
+
+      4%{
+        content:'Larry';
+        border-right: 3px solid #fff;
+      }
+
+      5%{
+        content:'Larry ';
+        border:none;
+      }
+
+      6%{
+        content:'Larry D';
+        border-right: 3px solid #fff;
+      }
+
+      7%{
+        content:'Larry Da';
+        border:none;
+      }
+      
+      8%{
+        content:'Larry Dan';
+        border-right: 3px solid #fff;
+      }
+      
+      9%{
+        content:'Larry Dani';
+        border:none;
+      }
+
+      10%{
+        content:'Larry Danie';
+        border-right: 3px solid #fff;
+      }
+
+      11%{
+        content:'Larry Daniel';
+        border:none;
+      }
+
+      11%{
+        content:'Larry Daniels';
+        border-right: 3px solid #fff;
+      }
+      
+      20%{
+        content:'Larry Daniel';
+        border:none;
+      }
+
+      21%{
+        content:'Larry Danie';
+        border-right: 3px solid #fff;
+      }
+
+      22%{
+        content:'Larry Dani';
+        border:none;
+      }
+
+      23%{
+        content:'Larry Dan';
+        border-right: 3px solid #fff;
+      }
+
+      24%{
+        content:'Larry Da';
+        border:none;
+      }
+
+      25%{
+        content:'Larry D';
+        border-right: 3px solid #fff;
+      }
+
+      26%{
+        content:'Larry ';
+        border:none;
+      }
+
+      27%{
+        content:'Larry';
+        border-right: 3px solid #fff;
+      }
+
+      28%{
+        content:'Larr';
+        border:none;
+      }
+
+      29%{
+        content:'Lar';
+        border-right: 3px solid #fff;
+      }
+    
+      30%{
+        content:'La';
+        border:none;
+      }
+
+      31%{
+        content:'L';
+        border-right: 3px solid #fff;
+      }
+
+      32%{
+        content:'';
+        border:none;
+      }
+
+
+      33%{
+          content:'S';
+          border-right: 3px solid #fff;
+      }
+
+      34%{
+        content:'So';
+        border:none;
+       }
+
+       35%{
+        content:'Sof';
+        border-right: 3px solid #fff;
+       }
+
+       36%{
+        content:'Soft';
+        border:none;
+       }
+
+       37%{
+        content:'Softw';
+        border-right: 3px solid #fff;
+       }
+
+       38%{
+        content:'Softwa';
+        border:none;
+       }
+
+       39%{
+        content:'Softwar';
+        border-right: 3px solid #fff;
+       }
+
+       40%{
+        content:'Software';
+        border:none;
+       }
+
+       41%{
+        content:'Software E';
+        border-right: 3px solid #fff;
+       }
+
+       42%{
+        content:'Software En';
+        border:none;
+       }
+
+       43%{
+        content:'Software Eng';
+        border-right: 3px solid #fff;
+       }
+
+       44%{
+        content:'Software Engi';
+        border:none;
+       }
+
+       45%{
+        content:'Software Engin';
+        border-right: 3px solid #fff;
+       }
+
+       46%{
+        content:'Software Engine';
+        border:none;
+       }
+
+       47%{
+        content:'Software Enginee';
+        border-right: 3px solid #fff;
+       }
+
+       48%{
+        content:'Software Engineer';
+        border:none;
+       }
+
+       60%{
+        content:'Software Enginee';
+        border-right: 3px solid #fff;
+       }
+
+       61%{
+        content:'Software Engine';
+        border:none;
+       }
+
+       62%{
+        content:'Software Engin';
+        border-right: 3px solid #fff;
+       }
+
+       63%{
+        content:'Software Engi';
+        border:none;
+       }
+
+       64%{
+        content:'Software Eng';
+        border-right: 3px solid #fff;
+       }
+
+       65%{
+        content:'Software En';
+        border:none;
+       }
+
+       66%{
+        content:'Software E';
+        border-right: 3px solid #fff;
+       }
+
+       67%{
+        content:'Software';
+        border:none;
+       }
+
+       68%{
+        content:'Softwar';
+        border-right: 3px solid #fff;
+       }
+
+       69%{
+        content:'Softwa';
+        border:none;
+       }
+
+       70%{
+        content:'Softw';
+        border-right: 3px solid #fff;
+       }
+
+       71%{
+        content:'Soft';
+        border:none;
+       }
+
+       72%{
+        content:'Sof';
+        border-right: 3px solid #fff;
+       }
+
+       73%{
+        content:'So';
+        border:none;
+       }
+
+       74%{
+        content:'S';
+        border-right: 3px solid #fff;
+       }
+
+       75%{
+        content:'';
+        border:none;
+       }
+
+       76%{
+        content:'R';
+        border-right: 3px solid #fff;
+       }
+
+       77%{
+        content:'Re';
+        border:none;
+       }
+
+       78%{
+        content:'Rea';
+        border-right: 3px solid #fff;
+       }
+       
+       79%{
+        content:'Reac';
+        border:none;
+       }
+
+       80%{
+        content:'React';
+        border-right: 3px solid #fff;
+       }
+
+       81%{
+        content:'React.';
+        border:none;
+       }
+
+       81%{
+        content:'React.J';
+        border-right: 3px solid #fff;
+       }
+
+       82%{
+        content:'React.JS';
+        border:none;
+       }
+
+       90%{
+        content:'React.J';
+        border-right: 3px solid #fff;
+       }
+
+       91%{
+        content:'React.';
+        border:none;
+       }
+
+       92%{
+        content:'React';
+        border-right: 3px solid #fff;
+       }
+
+       92%{
+        content:'Reac';
+        border:none;
+       }
+
+       93%{
+        content:'Rea';
+        border-right: 3px solid #fff;
+       }
+
+       94%{
+        content:'Re';
+        border:none;
+       }
+
+       95%{
+        content:'R';
+        border-right: 3px solid #fff;
+       }
+
+       96%{
+        content:'';
+        border:none;
+       }
+     
+}
+
+.home .socials i{
+  height: 30px;
+  width: 30px;
+
+  background-color: var(--alt-color);
+}
+@media(max-width:600px){
+    .home h1{
+        font-size: 40px;
+    }
+    .home h2{
+        font-size: 25px;
+    }
+    .home .typing::before{
+        font-size: 22px;
+    }
+}
+
+/*********About || Section*********/
+.about .image{
+  z-index: 0;
+}
+.about .image::before{
+    content:'';
+    width: 80%;
+    height: 80%;
+
+    background-image:url('../images/dots.png');
+    background-repeat: repeat;
+
+    position: absolute;
+    left: -30px;
+    bottom: -30px;
+    
+    z-index: -1;
+}
+
+.about .text .skills .progress{
+    height: 25px;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px 5px #e4e4e4 inset;
+}
+
+.about .text .skills .progress:first-child .progress-bar,
+.about .text .skills .progress:nth-child(2) .progress-bar,
+.about .text .skills .progress:nth-child(3) .progress-bar{
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+.about .text .skills .progress:first-child .progress-bar{
+  animation-name: prog1;
+  width: 95%;
+}
+.about .text .skills .progress:nth-child(2) .progress-bar{
+  animation-name: prog2;
+  width: 80%;
+}
+.about .text .skills .progress:nth-child(3) .progress-bar{
+  animation-name: prog3;
+  width: 90%;
+}
+@keyframes prog1{
+  0%{
+    width: 0%;
+  }
+  100%{
+      width: 95%;
+  }
+}
+@keyframes prog2{
+  0%{
+    width: 0%;
+  }
+  100%{
+      width: 80%;
+  }
+}
+@keyframes prog3{
+  0%{
+    width: 0%;
+  }
+  100%{
+      width: 90%;
+  }
+}
+
+
+.about .text .btns a{
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+.about .text .btns a:first-child:hover{
+     background-color: var(--main-color) !important;
+     color:var(--alt-color) !important;
+}
+.about .text .btns a:nth-child(2):hover{
+    background-color: var(--alt-color) !important;
+    color:var(--main-color) !important;
+}
+
+/*********Services || Section********/
+
+.services .service i{
+  width: 70px;
+  height: 70px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.services .service:hover i{
+  color:var(--main-color) !important;
+  background-color: var(--alt-color) !important;
+}
+
+/*********Portfolio || Section********/
+.portfolio .nav-pills .nav-link::after{
+  content:'';
+  height: 2px;
+  width: 0;
+
+  background-color: var(--alt-color);
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.portfolio .nav-pills .nav-link.active::after{
+  width: 100%;
+}
+
+.portfolio .tab-content .tab-pane .image::after{
+  content:'';
+  width: 96%;
+  height: 96%;
+
+  background-color: var(--main-color);
+
+  position: absolute;
+  left:2%;
+  bottom:-20%;
+
+  opacity:0;
+  z-index: -1;
+
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.portfolio .tab-content .tab-pane .image:hover::after{
+  opacity:.9;
+  z-index: 0;
+  bottom:2%;
+}
+
+.portfolio .tab-content .tab-pane .image .content h6,
+.portfolio .tab-content .tab-pane .image .content .icons{
+  left:50%;
+
+  opacity: 0;
+  z-index: -1;
+
+  transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+}
+
+.portfolio .tab-content .tab-pane .image .content h6{
+  top:30%;
+}
+.portfolio .tab-content .tab-pane .image .content .icons{
+  bottom:30%;
+}
+.portfolio .tab-content .tab-pane .image:hover .content h6{
+  top:35%;
+  opacity: 1;
+  z-index: 2;
+}
+.portfolio .tab-content .tab-pane .image:hover .content .icons{
+
+  opacity: 1;
+  bottom:35%;
+}
+.tab-pane:not(.active) {
+  display: none !important;
+}
+
+@media(max-width:600px){
+  .portfolio .nav-pills .nav-item{
+    padding:0 10px !important;
+  }
+}
+
+/*********Clients || Section**********/
+.clients .carousel-item img{
+  height: 90px;
+  width: 90px;
+}
+.clients .carousel-item p:first-of-type{
+  font-size: 15px;
+}
+.clients .carousel-item p:nth-of-type(2){
+  font-size: 12px;
+}
+.clients .carousel .carousel-indicators button[data-bs-target]{
+  height: 10px !important;
+  width: 10px !important;  
+}
+
+/*********Team Members || Section**********/
+.team .image{
+  height: 420px !important;
+}
+.team .image img{
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.team .image .layer{
+  content:'';
+  width: 40%;
+  height: 40%;
+
+  background-color:var(--main-color);
+
+  position: absolute;
+  left:30%;
+  bottom:30%;
+
+  opacity:0;
+  z-index: -1;
+
+
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.team .icons{
+  opacity:0;
+  z-index: -1;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+.team .icon{
+  padding: 10px 5px;
+}
+
+.team .member:hover .layer{
+    transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    -o-transform: rotateY(360deg);
+    opacity:1;
+    z-index: 1;
+    width: 96%;
+    height: 96%;
+    left:2%;
+    bottom:2%;
+}
+
+.team .member:hover .icons{
+  z-index: 2;
+  opacity: 1;
+}
+.team .image:hover img{
+  scale:1.1;
+}
+
+@media(max-width:992px){
+  .team .image{
+    height:350px !important;
+  }
+}
+
+/*********Contact|| Section**********/
+.contact .methods i{
+ 
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.contact .methods > div:hover i{
+  color:var(--main-color) !important;
+  background-color: var(--alt-color) !important;
+}
+
+.contact form textarea{
+  height: 200px !important;
+}
+
+.contact form .btn{
+  width: fit-content;
+  background-color: var(--alt-color) !important;
+  color:var(--main-color) !important;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.contact form .btn:hover{
+  background-color: var(--main-color) !important;
+  color:var(--alt-color) !important;
+}
+/*********Footer || Section**********/
+footer{
+  color:#748182;
+}
+/**********Done**********/
